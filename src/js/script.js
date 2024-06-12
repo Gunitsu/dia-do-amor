@@ -89,8 +89,5 @@ const audio = document.createElement("audio");
 audio.controls = true; // Adiciona controles de áudio
 audio.autoplay = true; // Inicia a reprodução automaticamente
 audio.src = "src/music.mp3"; // Define a fonte do áudio
-audio.style.position = "absolute"; // Define a posição como absoluta
-audio.style.top = "400px"; // Ajusta a posição vertical conforme necessário
-audio.style.left = "50%"; // Ajusta a posição horizontal conforme necessário
-audio.style.transform = "translateX(-50%)"; // Centraliza horizontalmente
+audio.classList.add("draw__audio"); // Adiciona a classe draw__audio
 app.appendChild(audio);

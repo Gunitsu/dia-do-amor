@@ -130,6 +130,13 @@ body {
   animation: color-change 5s infinite;
 }
 
+.draw__audio {
+  position: absolute;
+  top: 400px; /* Ajusta a posição vertical conforme necessário */
+  left: 50%; /* Ajusta a posição horizontal conforme necessário */
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+}
+
 @keyframes color-change {
   0% { color: #fff; }
   25% { color: #ff4e4e; }
@@ -183,10 +190,18 @@ body {
 
   .draw__lyrics {
     font-size: 14px;
-    top: 75%; /* Ajuste vertical para o layout móvel */
+    top: 45%; /* Ajuste vertical para o layout móvel */
   }
 
   .draw__lyrics p {
     font-size: 6px; /* Ajuste o tamanho do texto para o layout móvel */
   }
+
+  .draw__audio {
+    position: absolute;
+    top: 650px; /* Ajusta a posição vertical conforme necessário */
+    left: 50%; /* Ajusta a posição horizontal conforme necessário */
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+  }
+
 }
