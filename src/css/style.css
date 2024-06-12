@@ -151,7 +151,9 @@ body {
 
 @media screen and (max-width: 768px) {
   .draw__bg {
-    display: none;
+    top: 50%;
+    width: 5%;
+    height: 400px;
   }
 
   .draw__couple {
@@ -189,8 +191,8 @@ body {
   }
 
   .draw__lyrics {
-    font-size: 14px;
-    top: 45%; /* Ajuste vertical para o layout móvel */
+    font-size: 10px;
+    top: 50%; /* Ajuste vertical para o layout móvel */
   }
 
   .draw__lyrics p {
