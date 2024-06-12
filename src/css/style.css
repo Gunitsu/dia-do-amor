@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+html, body, .draw {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  display: block;
+}
+
+body {
+  background-color: #0b0b0f;
+}
+
+.draw__bg, .draw__couple {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 700px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.draw__bg img {
+  position: relative;
+  left: 27px;
+}
+
+.draw__couple img {
+  top: -71px;
+  position: relative;
+}
+
+.draw__text {
+  font-family: "Press Start 2p", sans-serif;
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
+  line-height: 1.5em;
+  position: relative;
+  top: 80px;
+}
+
+.draw__text small {
+  color: #ff4e4e;
+}
+
+.draw__star {
+  position: absolute;
+  background-color: #fff;
+  opacity: 0;
+  animation: star 2s ease-in-out infinite;
+}
+
+@keyframes star {
+  0%, 100% {
+    opacity: 0;
+  } 50% {
+    opacity: 1;
+  }
+}
+
+.draw__couple:hover .draw__balloon-a, 
+.draw__couple:hover .draw__balloon-b {
+  opacity: 1;
+}
+
+.draw__balloon-a, .draw__balloon-b {
+    position: absolute;
+    top: 50px;
+    opacity: 0;
+    transition: .5s;
+}
+
+.draw__balloon-a {
+  left: 120px;
+}
+
+.draw__balloon-b {
+  right: 120px;
+}
+
+.draw__balloon-a img, .draw__balloon-b img {
+    top: 0;
+}
+
+.draw__balloon-a:before, .draw__balloon-b:before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    margin: auto;
+    bottom: -20px;
+    box-shadow: 0px 0 0 transparent, 5px 0 0 white, 10px 0 0 white, 15px 0 0 transparent, 0px 5px white, 5px 5px white, 10px 5px white, 15px 5px white, 0 10px transparent, 5px 10px white, 10px 10px white, 15px 10px transparent;
+}
+
+.draw__balloon-a:before { right: 30px; }
+.draw__balloon-b:before { left: 30px; }
+
+.draw__ring {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 100px; /* Adjust as needed to position below text */
+}
+
+.draw__ring img {
+  width: 100px; /* Adjust as needed for the ring size */
+  height: auto;
+}
+
+.draw__lyrics {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 80%;
+  animation: color-change 5s infinite;
+}
+
+@keyframes color-change {
+  0% { color: #fff; }
+  25% { color: #ff4e4e; }
+  50% { color: #4eff4e; }
+  75% { color: #4e4eff; }
+  100% { color: #fff; }
+}
+
+.draw__lyrics p {
+  margin: 0 0 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .draw__bg {
+    display: none;
+  }
+
+  .draw__couple {
+    top: initial;
+  }
+
+  .draw__text {
+    top: 30px;
+    font-size: 1.5em;
+  }
+
+  .draw__balloon-a, .draw__balloon-b {
+    opacity: 1;
+    width: 60px;
+  }
+
+  .draw__balloon-a {
+    left: 30px;
+  }
+
+  .draw__balloon-b {
+    right: 30px;
+  }
+
+  .draw__balloon-a img, .draw__balloon-b img {
+    width: 100%;
+  }
+
+  .draw__ring {
+    top: 50px; /* Adjust for mobile layout */
+  }
+
+  .draw__ring img {
+    width: 50px; /* Adjust for mobile layout */
+  }
+
+  .draw__lyrics {
+    font-size: 14px;
+    top: 75%; /* Ajuste vertical para o layout móvel */
+  }
+
+  .draw__lyrics p {
+    font-size: 6px; /* Ajuste o tamanho do texto para o layout móvel */
+  }
+}
