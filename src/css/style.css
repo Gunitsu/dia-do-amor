@@ -190,7 +190,7 @@ body {
 
   .draw__lyrics {
     font-size: 5px;
-    top: 50%; /* Ajuste vertical para o layout móvel */
+    top: 48%; /* Ajuste vertical para o layout móvel */
   }
 
   .draw__lyrics p {
@@ -200,7 +200,7 @@ body {
   .draw__audio {
     position: absolute;
     width: 200px;
-    top: 650px; /* Ajusta a posição vertical conforme necessário */
+    top: 690px; /* Ajusta a posição vertical conforme necessário */
     left: 50%; /* Ajusta a posição horizontal conforme necessário */
 
     transform: translateX(-50%); /* Centraliza horizontalmente */
